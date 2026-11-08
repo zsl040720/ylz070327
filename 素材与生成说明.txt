@@ -1,0 +1,61 @@
+﻿素材与生成说明
+当前背景为相册换位版，通过内置图像编辑将指定两张相纸对调；原图与旧版PNG留档。
+新增花瓣素材使用内置图像生成；RGBA透明背景，2×2相同大小分区，用于轻量粒子精灵。
+“效果预览-模拟频谱.jpg”使用明确标记的模拟信号进行排版验收。正式工程仅接收Wallpaper Engine系统音频，没有模拟音频生成器。
+交互版本复用已认可的2560×1440黑裙漫画壁纸；第三张使用用户提供的1024×572原始WEBP，文件未重生成或改图，录影边框和消防箱均保留。
+“交互预览”截图只展示真实交换后的界面，没有加入模拟音频。切换使用本地图片层，不会把人像或五官拉伸变形。
+
+花瓣素材最终提示词：
+Use case: photorealistic-natural.
+Asset type: transparent particle sprite atlas for a subtle photographic flower-garden desktop wallpaper.
+Create a square 2 by 2 sprite sheet containing exactly FOUR separate natural flower-petal cutouts, exactly one centered in each quadrant, with generous truly transparent empty gutters and a transparent outer margin. There is no visible grid. Each petal occupies at most 55 percent of its quadrant's width and height. No overlap, no touching quadrants, no cast shadow onto any background.
+Top-left: one curved ivory-white rose petal, soft warm pale pink at the base, slightly curled organic edge, viewed from above at a slight angle.
+Top-right: one small dusty-blue hydrangea petal, single petal, natural delicate veins, viewed slightly obliquely.
+Bottom-left: one pale blush-pink rose petal, translucent edges, gentle irregular natural fold.
+Bottom-right: one small creamy-white hydrangea petal with a subtle cool-blue tint near its base, a different angle from the others.
+Real macro photographic detail, delicate satin botanical surface, subdued light, restrained cream/blush/dusty blue palette. These will be rendered at only 12 to 32 pixels on screen over an existing forest-green portrait photograph, so make clean distinct realistic silhouettes. Actual transparent alpha, not a checkerboard image or solid background.
+No text, labels, borders, leaves, stems, whole flowers, multiple petals inside one quadrant, decorative sparkles or logos. Square atlas, equal 2x2 quadrants.
+
+相册换位编辑提示词：
+Use case: precise-object-edit / compositing.
+EDIT TARGET is input image 1: the finished 16:9 forest-green portrait wallpaper with four small photographic prints on the right.
+Make ONLY this requested change: SWAP THE POSITIONS of the two specific framed photo prints identified by inputs 2 and 3.
+Input 2 is identification/reference: the long dark-haired green-tinted close-up selfie with a small cross-shaped hair clip, currently the UPPER-RIGHT small framed print.
+Input 3 is identification/reference: the silver compact-camera photo with a glasses-wearing portrait on the camera LCD, currently the LOWER-RIGHT framed print over the striped sleeve.
+Move the CAMERA print to the previous upper-right selfie position among the flowers.
+Move the GREEN-TINTED LONG-HAIR SELFIE print to the previous lower-right camera position over the outer sleeve.
+Swap the whole photographic paper objects, not just the faces. Retain their own image contents, narrow aged-ivory matte-paper borders and convincing subtle contact shadows. Small scale/rotation adjustments are allowed only to fit the two existing spots elegantly, so every frame remains fully inside the canvas and the lower print leaves about 4-5% bottom margin. Minor paper-border overlap is fine; do not cover any small-photo face.
+
+Strict invariants: do NOT change the large main person's face, expression, skin, hair, pose, clothing or size. Preserve the entire left 40% dark negative space, the flower background everywhere outside the two swap spots, the warm analog grain/color grading, and the other TWO small prints (black-dress/manga at upper-right-left, glasses-wearing yellow-blouse/exhibition at mid-right) in exactly their existing positions. Keep exactly FOUR small framed prints, each photo exactly once. No duplicate photos, no new people, no new objects, no new captions, watermarks, recording overlays, timestamps, countdowns, particles, text or UI.
+Do not redesign or recompose the wallpaper. Do not invent replacement faces. This is a localized swap of two existing paper photos only.
+Output the wallpaper itself, no mockup. Maintain exact landscape 16:9 composition. Target final file dimensions 2560x1440.
+
+本轮高清与四张独立相册修订
+- 使用内置 imagegen：metro-hd.png 是基于原1024×572地铁图片的细节重建，原生生成1672×941，再等比高质量导出2560×1440；不是找回原始光学细节，未宣称原生4K。
+- forest-clean.png 同样由内置imagegen编辑原花间图，去除四张烘焙相册以便四张照片作为真正独立的可移动图层。原生生成1672×941后等比导出2560×1440，不作像素级保真承诺。
+- 原wallpaper.png、metro.webp和最初5张照片均保留。没有改写五张照片；新背景和移动相册分层。
+- 三张“交互预览”现为1600×900浏览器视口截图，避免浏览器全页截图缩放导致的预览像素损失；正式背景资源均为2560×1440。旧模拟频谱截图只作历史参考，不收入本次安装包。
+
+地铁增强实际提示词（内置工具）：
+Use case: identity-preserve / photographic restoration.
+Asset type: high-definition replacement background for an existing personal desktop wallpaper, target 2560x1440 or larger native landscape pixels, 16:9.
+EDIT TARGET is the supplied existing photograph, not a style reference. It is a low-resolution 1024x572 selfie in a subway corridor. Improve its real perceived detail and reduce compression blur, while preserving the same person and EXACT image composition. This is restrained high-fidelity super-resolution restoration, not a new scene or redesigned portrait.
+Preserve invariants: the girl's exact facial structure, eye placement, glasses frame geometry, nose, lips, neutral slight smile, bangs, dark tied-back hair, pose, selfie framing, pale yellow blouse, white lace undershirt, skin color and proportions. Do not beautify, change age, enlarge eyes, reshape face, add makeup, or turn the subject into a different person. Keep the subject at exactly the same place and size. Keep all corridor geometry, perspective, blue poster wall on the right, white wall and floor on the left, dark ceiling beams and lights. Preserve BOTH visible red fire equipment boxes on the left, at their existing positions. Preserve the existing white camera-viewfinder border, red REC indicator, battery icon, corner guides, existing bottom timecode and Kodak sticker; do not add new text or change their layout. Background poster text may remain softly unresolved where the source cannot support exact words; DO NOT invent new Chinese lettering.
+Enhance: naturally resolved hair strands, clean glasses edges and subtle reflections, eyelashes without artificial exaggeration, realistic fine skin texture rather than waxy smoothing, cloth and lace detail, cleaner corridor edges and less JPEG noise. Keep the original soft photographic light, color balance and natural depth; no HDR halos, ringing, gritty over-sharpening, plastic skin, painting or illustration effect.
+Output only the restored wallpaper photo itself at 2560x1440 (native high-definition output requested), no mockup, no surrounding border beyond the existing viewfinder. Do not include any photo-album cards, countdown digits, audio visualizer, particles, widgets, desktop icons or new people. Those are separate runtime layers. Do not change the composition or remove any objects to obtain more detail.
+
+花间无相册底板实际提示词（内置工具）：
+Use case: precise-object-edit / clean-plate object removal.
+Asset type: clean background plate for an existing 2560 x 1440 desktop wallpaper; landscape 16:9, exactly the same composition as the input.
+INPUT IMAGE 1 IS THE EDIT TARGET, not inspiration. This is a surgical removal edit, NOT a new portrait and NOT a redesign.
+Remove ONLY the FOUR small printed photo cards on the RIGHT, including every photograph, paper border/frame, camera-photo content, and their cast shadows:
+1) The black-dress/manga card near the upper-right, approximately x 75-87%, y 7-40%.
+2) The camera-photo card farther right, approximately x 85-97%, y 15-45%.
+3) The yellow-shirt portrait card at the right shoulder, approximately x 80-92%, y 39-65%.
+4) The long-hair portrait card over the lower-right striped sleeve, approximately x 81-97%, y 70-97%.
+Do NOT remove the large main person. Remove all four small cards completely, not merely their contents.
+Fill only the holes formerly covered by these cards and their very narrow shadow margins. For the upper-right three positions, naturally continue the existing cream-white / pale-blue flower wall behind them, matching the already visible petals and lighting. Where an existing flower-wall/shoulder boundary meets a removed-card region, continue that boundary naturally without moving the shoulder. For the bottom-right card, restore the existing beige/gray striped jacket sleeve with the same stripe direction, scale, folds, cloth texture and lighting as its immediately surrounding fabric.
+Absolute invariants: keep the large person's face, eyes, gaze, expression, skin texture, hair and hairline, head position, body shape, pose, clothing position, neckline, shoulder position, and framing unchanged. Preserve the entire original left-side dark green negative space, film grain, warm muted color grading, illumination, flowers outside the card footprints, and every other original detail. No facial retouching, no beautification, no new hairstyle, no age change, no global restyling, no crop, no camera shift or relighting. Outside the four card footprints and their shadow edges the image should remain as close to pixel-identical as possible.
+The final image must contain ZERO photo cards, ZERO small faces, ZERO camera inserts, ZERO paper/frame remnants, ZERO ghost borders or shadows. No replacement objects, no extra people, no newly added bouquets, no text, no logos, no watermark. This must look like the same original floral portrait photographed before any small paper photos were placed on it.
+Deliver the clean wallpaper image itself, full bleed, same 16:9 composition. Desired final resolution: exactly 2560x1440, high-definition detail.
+漫画插件字体：站酷快乐体（ZCOOL KuaiLe），本地打包，离线使用；官方来源、原始字体哈希与SIL OFL 1.1全文位于 project/assets/fonts。此轮未修改五张原始照片或三张背景图片；新增黑边的修正仅涉及相框几何，不裁图。

@@ -1,0 +1,6 @@
+# Preserve the verified wallpaper and Windows launchers byte for byte.
+* -text
+*.png binary
+*.jpg binary
+*.webp binary
+*.ttf binary

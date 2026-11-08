@@ -1,0 +1,162 @@
+{
+  "date": "2026-11-07",
+  "wallpaper": {
+    "file": "assets/wallpaper.png",
+    "origin": "Built-in image edit of the approved wallpaper: swapped the upper-right green-tinted selfie and lower-right compact-camera print. Exported to 2560x1440; source photographs and prior PNG retained.",
+    "sha256": "A68B8356BC0F5890C16FBAF8914DF1E5FB28474B16A0AAA4F7EF3BA03AAEBF5C",
+    "previousSha256": "8187291CAD672E142E93774C7B9B5F9A1565A0D99CBF7CCBE930A8262798D1FA",
+    "editPrompt": "Use case: precise-object-edit / compositing.\nEDIT TARGET is input image 1: the finished 16:9 forest-green portrait wallpaper with four small photographic prints on the right.\nMake ONLY this requested change: SWAP THE POSITIONS of the two specific framed photo prints identified by inputs 2 and 3.\nInput 2 is identification/reference: the long dark-haired green-tinted close-up selfie with a small cross-shaped hair clip, currently the UPPER-RIGHT small framed print.\nInput 3 is identification/reference: the silver compact-camera photo with a glasses-wearing portrait on the camera LCD, currently the LOWER-RIGHT framed print over the striped sleeve.\nMove the CAMERA print to the previous upper-right selfie position among the flowers.\nMove the GREEN-TINTED LONG-HAIR SELFIE print to the previous lower-right camera position over the outer sleeve.\nSwap the whole photographic paper objects, not just the faces. Retain their own image contents, narrow aged-ivory matte-paper borders and convincing subtle contact shadows. Small scale/rotation adjustments are allowed only to fit the two existing spots elegantly, so every frame remains fully inside the canvas and the lower print leaves about 4-5% bottom margin. Minor paper-border overlap is fine; do not cover any small-photo face.\n\nStrict invariants: do NOT change the large main person's face, expression, skin, hair, pose, clothing or size. Preserve the entire left 40% dark negative space, the flower background everywhere outside the two swap spots, the warm analog grain/color grading, and the other TWO small prints (black-dress/manga at upper-right-left, glasses-wearing yellow-blouse/exhibition at mid-right) in exactly their existing positions. Keep exactly FOUR small framed prints, each photo exactly once. No duplicate photos, no new people, no new objects, no new captions, watermarks, recording overlays, timestamps, countdowns, particles, text or UI.\nDo not redesign or recompose the wallpaper. Do not invent replacement faces. This is a localized swap of two existing paper photos only.\nOutput the wallpaper itself, no mockup. Maintain exact landscape 16:9 composition. Target final file dimensions 2560x1440."
+  },
+  "petals": {
+    "file": "assets/petals-atlas.png",
+    "origin": "Built-in image generation, 1254x1254 RGBA 2x2 sprite atlas. Transparent corner/center alpha verified.",
+    "prompt": "Use case: photorealistic-natural.\nAsset type: transparent particle sprite atlas for a subtle photographic flower-garden desktop wallpaper.\nCreate a square 2 by 2 sprite sheet containing exactly FOUR separate natural flower-petal cutouts, exactly one centered in each quadrant, with generous truly transparent empty gutters and a transparent outer margin. There is no visible grid. Each petal occupies at most 55 percent of its quadrant's width and height. No overlap, no touching quadrants, no cast shadow onto any background.\nTop-left: one curved ivory-white rose petal, soft warm pale pink at the base, slightly curled organic edge, viewed from above at a slight angle.\nTop-right: one small dusty-blue hydrangea petal, single petal, natural delicate veins, viewed slightly obliquely.\nBottom-left: one pale blush-pink rose petal, translucent edges, gentle irregular natural fold.\nBottom-right: one small creamy-white hydrangea petal with a subtle cool-blue tint near its base, a different angle from the others.\nReal macro photographic detail, delicate satin botanical surface, subdued light, restrained cream/blush/dusty blue palette. These will be rendered at only 12 to 32 pixels on screen over an existing forest-green portrait photograph, so make clean distinct realistic silhouettes. Actual transparent alpha, not a checkerboard image or solid background.\nNo text, labels, borders, leaves, stems, whole flowers, multiple petals inside one quadrant, decorative sparkles or logos. Square atlas, equal 2x2 quadrants."
+  },
+  "preview": {
+    "file": "效果预览-模拟频谱.png",
+    "origin": "Local browser viewport screenshot. Frequency bars use clearly labeled synthetic host input only in the separate validation fixture, not in the delivered project."
+  },
+  "interactiveBackgrounds": [
+    {
+      "id": "manga",
+      "file": "assets/backgrounds/manga.png",
+      "origin": "Previously generated 2560x1440 black-dress/manga panorama, approved by user; reused without image edits.",
+      "sha256": "3D042C00F17B936C0B488733AAD5C2D7A4C31975D86AE22C88488F5149141895"
+    },
+    {
+      "id": "metro",
+      "file": "assets/backgrounds/metro-hd.png",
+      "origin": "HD reconstructed replacement, see runtimeBackgrounds.metro; original WEBP retained",
+      "sha256": "B4EC76C352D4A15E0650C752744B99618B97134824BB86352C78B34FF12C8186"
+    }
+  ],
+  "originalAlbumPhotos": [
+    {
+      "id": "forest",
+      "file": "assets/photos/forest.jpg",
+      "source": "0_2026-09-07 20_47_47.jpg",
+      "width": 1080,
+      "height": 1920,
+      "sha256": "0F25DA45C876DC085B54F989317CFF922D849146B169AA68E5F74CDB7BF11E55",
+      "origin": "Original user photo, byte-identical copy; displayed with contain; not regenerated/cropped/stretched"
+    },
+    {
+      "id": "manga",
+      "file": "assets/photos/manga.jpg",
+      "source": "0_2026-09-08 01_01_59.jpg",
+      "width": 1440,
+      "height": 2563,
+      "sha256": "73D1851188315C29D11CA50A9A93092A77285F6639F09BECF92934121C6F6A35",
+      "origin": "Original user photo, byte-identical copy; displayed with contain; not regenerated/cropped/stretched"
+    },
+    {
+      "id": "camera",
+      "file": "assets/photos/camera.png",
+      "source": "1583bf2484efcb9514cab7e067741426_750.png",
+      "width": 364,
+      "height": 647,
+      "sha256": "F6BF738ACBC431D3FF4C12F28142DCC0EDD15DBA779EEDF24A9113D3F1101F42",
+      "origin": "Original user photo, byte-identical copy; displayed with contain; not regenerated/cropped/stretched"
+    },
+    {
+      "id": "longhair",
+      "file": "assets/photos/longhair.png",
+      "source": "01c42a6a9e9eec51130ec835ef53fe3d_750.png",
+      "width": 364,
+      "height": 647,
+      "sha256": "0CC4E5EF3B31DF8AF6F2797B64A608632F898A4E11BAB83028064A3C74810320",
+      "origin": "Original user photo, byte-identical copy; displayed with contain; not regenerated/cropped/stretched"
+    },
+    {
+      "id": "metro",
+      "file": "assets/photos/metro.png",
+      "source": "10971543d8896aee78f4538b93ee4975_750.png",
+      "width": 364,
+      "height": 647,
+      "sha256": "C238246ED04455BE540DBBA3FD84184AA2E7AAF4A83C6132E85E88F31CCF9357",
+      "origin": "Original user photo, byte-identical copy; displayed with contain; not regenerated/cropped/stretched"
+    }
+  ],
+  "runtimeBackgrounds": {
+    "forest": {
+      "file": "assets/backgrounds/forest-clean.png",
+      "sha256": "4C5A13243FCFE9AB417DB870E93F8F25448A9A05C1D2F1DE87BA105CF76B7DE0",
+      "dimensions": [
+        2560,
+        1440
+      ],
+      "generatedDimensions": [
+        1672,
+        941
+      ],
+      "origin": "Built-in imagegen clean-plate removal of the four baked album prints, then aspect-preserving bicubic export. Face/composition visually retained, not pixel-identical. Original assets/wallpaper.png kept."
+    },
+    "manga": {
+      "file": "assets/backgrounds/manga.png",
+      "origin": "Previously approved panorama, unchanged"
+    },
+    "metro": {
+      "file": "assets/backgrounds/metro-hd.png",
+      "sha256": "B4EC76C352D4A15E0650C752744B99618B97134824BB86352C78B34FF12C8186",
+      "dimensions": [
+        2560,
+        1440
+      ],
+      "generatedDimensions": [
+        1672,
+        941
+      ],
+      "origin": "Built-in imagegen high-fidelity detail reconstruction of original1024x572 WEBP, then aspect-preserving bicubic export. AI reconstruction, not recovery of original optical detail; original metro.webp kept."
+    }
+  },
+  "liveAlbum": {
+    "cards": 4,
+    "interactiveSlots": [
+      "first",
+      "third"
+    ],
+    "fixedButMoving": [
+      "camera",
+      "longhair"
+    ],
+    "allScenesIndependent": true,
+    "bakedPassthrough": false,
+    "motion": "Four original-aspect photo roots share geometry, padding, shadow and dual-paper easing. Only manga/metro uses old-picture inward clip; forest pairs retain target-picture outward clip. Widgets sample that exact clip.",
+    "defaultDurationMs": 2000
+  },
+  "widgetThemeFont": {
+    "file": "assets/fonts/manga-comic.ttf",
+    "sha256": "812A6FC1FE54B6D73A419245C32DFEBA8AA33104D5BE90D1CF6AF082007CB71D",
+    "licenseFile": "assets/fonts/OFL-ZCOOL-KuaiLe.txt",
+    "licenseSha256": "538078469839B4A2E7AD22BEF4EBE41681A4E53749BB2A072144024F1D6D703D",
+    "sourceFile": "assets/fonts/SOURCE-ZCOOL-KuaiLe.json",
+    "family": "ZCOOL KuaiLe",
+    "cssAlias": "Flower Manga Comic",
+    "license": "SIL Open Font License 1.1",
+    "actualBrowserFontLoaded": true
+  },
+  "transitionPolicy": {
+    "reversePairs": [
+      "manga->metro",
+      "metro->manga"
+    ],
+    "outwardPairs": [
+      "forest->manga",
+      "manga->forest",
+      "forest->metro",
+      "metro->forest"
+    ],
+    "reverseDestination": "Shrink old wallpaper to an inscribed circle within the clicked album; target wallpaper is visible outside; no card deletion.",
+    "durationMs": 2000,
+    "rangeMs": [
+      800,
+      4000
+    ],
+    "reducedMotionMs": 140,
+    "widgets": "Countdown and spectrum use the same computed clip geometry as the background; inverse old-inside/new-outside for inward pair; never hidden for the wipe.",
+    "originalPhotos": "Five original photo files are byte-identical; contain fit. Frame local content geometry follows each original aspect ratio through movement; no source cropping.",
+    "forestWidgetsUnchanged": true,
+    "mangaWidgets": "Cool ice blue/lavender plus locally packaged ZCOOL KuaiLe Chinese handwritten font",
+    "metroWidgets": "Blue-gray/deep teal, light countdown variant at lefttop"
+  }
+}

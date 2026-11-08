@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Flower Manga Comic";
+  src: url("../assets/fonts/manga-comic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Only the countdown instance selected by the theme API is affected. */
+.flower-countdown[data-widget-theme] {
+  color: var(--widget-event, #f1e7d3);
+  font-family: var(--widget-font-body, "Microsoft YaHei", "PingFang SC", sans-serif);
+  text-shadow: var(--widget-shadow, 0 1px 12px rgba(16, 23, 13, 0.34));
+}
+.flower-countdown[data-widget-theme] .flower-countdown__event {
+  color: var(--widget-event, #f1e7d3);
+}
+.flower-countdown[data-widget-theme] .flower-countdown__days {
+  color: var(--widget-days, #f1e7d3);
+  font-family: var(--widget-font-numbers, Georgia, "Times New Roman", serif);
+}
+.flower-countdown[data-widget-theme] .flower-countdown__unit {
+  color: var(--widget-unit, #f1e7d3);
+}
+.flower-countdown[data-widget-theme] .flower-countdown__clock {
+  color: var(--widget-clock, #f1e7d3);
+  font-family: var(--widget-font-numbers, Georgia, "Times New Roman", serif);
+}
+.flower-countdown[data-widget-theme] .flower-countdown__status {
+  color: var(--widget-status, #f1e7d3);
+}
+.flower-countdown[data-widget-theme="manga"] .flower-countdown__event,
+.flower-countdown[data-widget-theme="manga"] .flower-countdown__unit,
+.flower-countdown[data-widget-theme="manga"] .flower-countdown__status {
+  letter-spacing: 0.04em;
+}
+.flower-countdown[data-widget-theme="manga"] .flower-countdown__clock {
+  letter-spacing: 0.03em;
+}
+/* Preserve forest opacity; the new manga/metro inks carry their own contrast. */
+.flower-countdown[data-widget-theme="manga"] .flower-countdown__event,
+.flower-countdown[data-widget-theme="manga"] .flower-countdown__unit,
+.flower-countdown[data-widget-theme="manga"] .flower-countdown__clock,
+.flower-countdown[data-widget-theme="manga"] .flower-countdown__status,
+.flower-countdown[data-widget-theme="metro"] .flower-countdown__event,
+.flower-countdown[data-widget-theme="metro"] .flower-countdown__unit,
+.flower-countdown[data-widget-theme="metro"] .flower-countdown__clock,
+.flower-countdown[data-widget-theme="metro"] .flower-countdown__status {
+  opacity: 1;
+}

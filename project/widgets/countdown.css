@@ -1,0 +1,98 @@
+.flower-countdown {
+  position: fixed;
+  z-index: 20;
+  left: 12%;
+  top: 56%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(4px, 0.45vh, 9px);
+  max-width: 32vw;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #f1e7d3;
+  background: none;
+  border: 0;
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  font-weight: 400;
+  line-height: 1.25;
+  text-shadow: 0 1px 12px rgba(16, 23, 13, 0.34);
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: none;
+}
+
+.flower-countdown[hidden],
+.flower-countdown [hidden] {
+  display: none !important;
+}
+
+.flower-countdown[data-countdown-position="lefttop"] { top: 18%; }
+.flower-countdown[data-countdown-position="leftbottom"] { top: 67%; }
+
+.flower-countdown__event {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: clamp(15px, 1.2vw, 34px);
+  letter-spacing: 0.13em;
+  opacity: 0.9;
+  pointer-events: auto;
+  cursor: default;
+}
+
+.flower-countdown__figure {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(10px, 0.7vw, 22px);
+  margin-top: clamp(4px, 0.7vh, 14px);
+  white-space: nowrap;
+}
+
+.flower-countdown__days {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(48px, 3.4vw, 112px);
+  font-weight: 400;
+  font-variant-numeric: lining-nums tabular-nums;
+  line-height: 1;
+  letter-spacing: 0.015em;
+}
+
+.flower-countdown__unit {
+  font-size: clamp(13px, 0.85vw, 26px);
+  letter-spacing: 0.15em;
+  opacity: 0.72;
+}
+
+.flower-countdown__clock {
+  margin-top: clamp(4px, 0.7vh, 12px);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(18px, 1.25vw, 38px);
+  font-variant-numeric: lining-nums tabular-nums;
+  letter-spacing: 0.07em;
+  white-space: nowrap;
+  opacity: 0.86;
+}
+
+.flower-countdown__status {
+  margin-top: clamp(3px, 0.35vh, 7px);
+  font-size: clamp(12px, 0.65vw, 18px);
+  letter-spacing: 0.16em;
+  opacity: 0.72;
+  pointer-events: auto;
+  cursor: default;
+}
+
+.flower-countdown__error {
+  max-width: 28vw;
+  margin-top: 0.8vh;
+  font-size: clamp(12px, 0.85vw, 23px);
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  overflow-wrap: anywhere;
+  opacity: 0.8;
+  pointer-events: auto;
+  cursor: default;
+}

@@ -1,0 +1,53 @@
+# Local validation and workstation-only records
+/checks/
+/rollback/
+/.impeccable/
+/DESIGN.md
+/验收记录.json
+
+# Generated archives belong in Releases, not source history
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+
+# Logs, temporary files and caches
+*.log
+/logs/
+*.tmp
+*.bak
+*.cache
+__pycache__/
+node_modules/
+
+# Credentials, private keys and tokens
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+credentials*.json
+token*.json
+*token*.txt
+.netrc
+.npmrc
+.git-credentials
+
+# Per-machine application and editor settings
+/config.json
+/config.*.json
+*.local
+*.local.*
+*.user
+*.suo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

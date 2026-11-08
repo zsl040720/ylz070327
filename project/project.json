@@ -1,0 +1,260 @@
+{
+  "title": "叶力展070327",
+  "description": "四张独立相册始终保留，原照片不裁切、不拉伸，相框与位置一起缓慢过渡。仅漫画与地铁互切为逆圆收拢到点击相册；涉及花间留影仍为圆形外扩。倒数日和系统音频柱跟随圆形边界同步换色，漫画使用本地漫画手写字体。含2560×1440高清增强背景、循环倒数日及可调花瓣和星尘，离线运行。",
+  "type": "web",
+  "file": "index.html",
+  "preview": "preview.jpg",
+  "contentrating": "Everyone",
+  "tags": [
+    "Relaxing"
+  ],
+  "visibility": "private",
+  "version": 0,
+  "general": {
+    "supportsaudioprocessing": true,
+    "properties": {
+      "interactionenabled": {
+        "order": -2,
+        "text": "交互 · 点击第一/第三相片切换",
+        "type": "bool",
+        "value": true
+      },
+      "transitionduration": {
+        "order": -1,
+        "text": "交互 · 圆形过渡时长（毫秒）",
+        "type": "slider",
+        "value": 2000,
+        "min": 800,
+        "max": 4000
+      },
+      "motion": {
+        "order": 0,
+        "text": "氛围 · 启用花间动效",
+        "type": "bool",
+        "value": true
+      },
+      "parallax": {
+        "order": 1,
+        "text": "鼠标视差强度",
+        "type": "slider",
+        "value": 20,
+        "min": 0,
+        "max": 100
+      },
+      "dust": {
+        "order": 2,
+        "text": "胶片浮尘数量",
+        "type": "slider",
+        "value": 35,
+        "min": 0,
+        "max": 100
+      },
+      "light": {
+        "order": 3,
+        "text": "花墙柔光强度",
+        "type": "slider",
+        "value": 25,
+        "min": 0,
+        "max": 100
+      },
+      "speed": {
+        "order": 4,
+        "text": "氛围流动速度",
+        "type": "slider",
+        "value": 35,
+        "min": 0,
+        "max": 100
+      },
+      "brightness": {
+        "order": 5,
+        "text": "画面亮度",
+        "type": "slider",
+        "value": 100,
+        "min": 60,
+        "max": 120
+      },
+      "petalsenabled": {
+        "order": 6,
+        "text": "花瓣 · 启用飘落花瓣",
+        "type": "bool",
+        "value": true
+      },
+      "petalsamount": {
+        "order": 7,
+        "text": "花瓣 · 数量",
+        "type": "slider",
+        "value": 14,
+        "min": 0,
+        "max": 60
+      },
+      "petalsspeed": {
+        "order": 8,
+        "text": "花瓣 · 速度（%，0=静止）",
+        "type": "slider",
+        "value": 100,
+        "min": 0,
+        "max": 300
+      },
+      "particledirection": {
+        "order": 9,
+        "text": "花瓣 · 飘落方向",
+        "type": "combo",
+        "value": "down",
+        "options": [
+          {
+            "label": "向下",
+            "value": "down"
+          },
+          {
+            "label": "左斜向下",
+            "value": "downleft"
+          },
+          {
+            "label": "右斜向下",
+            "value": "downright"
+          },
+          {
+            "label": "随机",
+            "value": "random"
+          }
+        ]
+      },
+      "sparklesenabled": {
+        "order": 10,
+        "text": "微光 · 启用暖光星尘",
+        "type": "bool",
+        "value": true
+      },
+      "sparklesamount": {
+        "order": 11,
+        "text": "微光 · 星尘数量",
+        "type": "slider",
+        "value": 12,
+        "min": 0,
+        "max": 40
+      },
+      "fit": {
+        "order": 12,
+        "text": "其他屏幕的适配方式",
+        "type": "combo",
+        "value": "contain",
+        "options": [
+          {
+            "label": "完整画面（保留全部照片）",
+            "value": "contain"
+          },
+          {
+            "label": "铺满屏幕（不同长宽比会裁切）",
+            "value": "cover"
+          }
+        ]
+      },
+      "countdownenabled": {
+        "order": 20,
+        "text": "倒数日 · 显示",
+        "type": "bool",
+        "value": true
+      },
+      "eventname": {
+        "order": 21,
+        "text": "倒数日 · 事件名称",
+        "type": "textinput",
+        "value": "辅助更新"
+      },
+      "targetdate": {
+        "order": 22,
+        "text": "倒数日 · 目标本地时间 YYYY-MM-DDTHH:mm:ss",
+        "type": "textinput",
+        "value": "2026-11-05T12:00:00"
+      },
+      "repeatenabled": {
+        "order": 23,
+        "text": "倒数日 · 启用循环",
+        "type": "bool",
+        "value": true
+      },
+      "repeatdays": {
+        "order": 24,
+        "text": "倒数日 · 每隔多少天（关闭循环时忽略）",
+        "type": "slider",
+        "value": 7,
+        "min": 1,
+        "max": 365
+      },
+      "countdownposition": {
+        "order": 25,
+        "text": "倒数日 · 显示位置",
+        "type": "combo",
+        "value": "leftmiddle",
+        "options": [
+          {
+            "label": "左侧留白中下部",
+            "value": "leftmiddle"
+          },
+          {
+            "label": "左侧留白上部",
+            "value": "lefttop"
+          },
+          {
+            "label": "左侧留白下部",
+            "value": "leftbottom"
+          }
+        ]
+      },
+      "spectrumenabled": {
+        "order": 40,
+        "text": "音频 · 显示响应频谱",
+        "type": "bool",
+        "value": true
+      },
+      "spectrumgain": {
+        "order": 41,
+        "text": "音频 · 灵敏度（%）",
+        "type": "slider",
+        "value": 160,
+        "min": 0,
+        "max": 400
+      },
+      "spectrumbars": {
+        "order": 42,
+        "text": "音频 · 频谱柱数量",
+        "type": "slider",
+        "value": 96,
+        "min": 16,
+        "max": 128
+      },
+      "spectrumheight": {
+        "order": 43,
+        "text": "音频 · 频谱最大高度（屏幕%）",
+        "type": "slider",
+        "value": 8,
+        "min": 3,
+        "max": 18
+      },
+      "spectrumwidth": {
+        "order": 44,
+        "text": "音频 · 左侧频谱宽度（屏幕%）",
+        "type": "slider",
+        "value": 36,
+        "min": 20,
+        "max": 90
+      },
+      "spectrumposition": {
+        "order": 45,
+        "text": "音频 · 频谱位置",
+        "type": "combo",
+        "value": "left",
+        "options": [
+          {
+            "label": "左下留白（不遮人物和照片）",
+            "value": "left"
+          },
+          {
+            "label": "整个屏幕底部",
+            "value": "bottom"
+          }
+        ]
+      }
+    }
+  }
+}
